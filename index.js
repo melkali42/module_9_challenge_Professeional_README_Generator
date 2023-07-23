@@ -64,16 +64,26 @@ const questions = [
 
 // Create a function that writes to README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log("README.md file has been generated!")
-    );
-}
-
-//Create a function to initialize the app
-function init() {
-    inquirer.createPromptModule(questions).then((answers) => {
-        const markdown = generateMarkdown(answers);
-        writeToFile("README.md", markdown);
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log("README.md file has been generated!");
+        }
     });
 }
+
+// Create a function to initialize the app
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            const markdown = generateMarkdown(answers);
+            writeToFile("README.md", markdown);
+        })
+        .catch((error) => {
+            console.error("Error occurred:", error);
+        });
+}
+
 init();
