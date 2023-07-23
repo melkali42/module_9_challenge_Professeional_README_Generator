@@ -38,7 +38,7 @@ const questions = [
         type: "input",
         name: "license",
         message: "Enter the license for your application:",
-        choices: ['MIT', 'Apache 2.0', 'GPL 3.0'],
+        choices: ['AGPLv3', 'Apache 2.0'],
     },
     {
         type: "input",
@@ -62,3 +62,18 @@ const questions = [
     },
 ];
 
+// Create a function that writes to README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log("README.md file has been generated!")
+    );
+}
+
+//Create a function to initialize the app
+function init() {
+    inquirer.createPromptModule(questions).then((answers) => {
+        const markdown = generateMarkdown(answers);
+        writeToFile("README.md", markdown);
+    });
+}
+init();
