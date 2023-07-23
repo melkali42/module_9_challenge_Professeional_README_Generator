@@ -6,12 +6,12 @@ You can quickly and easily create a README file by using a command-line applicat
 Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package. Review the Professional README Guide as a reminder of everything that a high-quality, professional README should contain.
 The application will be invoked by using the following command: node index.js
 
-User Story
+User Story:
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
-Acceptable Criteria
+Acceptable Criteria:
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
 THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -34,9 +34,9 @@ I Used Javascript, node.js, nquirer Package, installed package.json by creating 
 
 ## Usage
 
-This is the URL for the deployed application for this challenge: 
+This is the URL for the deployed application for this challenge: https://melkali42.github.io/module_9_challenge_Professeional_README_Generator/
 
-This is the URL for my GitHub repository for this challenge: 
+This is the URL for my GitHub repository for this challenge: https://github.com/melkali42/module_9_challenge_Professeional_README_Generator
 
 This is the Video link to demonstrate how this application is working and what the final project will look like: 
 
